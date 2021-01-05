@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "clean": "rimraf src & rimraf dist",
+    "prestart": "node pre.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
   "dependencies": {
     "imagemin": "^7.0.1",
     "imagemin-jpegtran": "^6.0.0",
-    "imagemin-pngquant": "^9.0.1"
+    "imagemin-pngquant": "^9.0.1",
+    "rimraf": "^3.0.2"
   }
 }
