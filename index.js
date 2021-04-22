@@ -2,7 +2,7 @@ const imgmin = require('imagemin')
 const fs = require('fs')
 const path = require('path')
 const imageminPngquant = require('imagemin-pngquant')
-const imageminJpegtran = require('imagemin-jpegtran')
+const imageminMozjpeg = require('imagemin-mozjpeg')
 
 const base = path.join(process.cwd(), 'src')
 const dest = path.join(process.cwd(), 'dist')
@@ -15,7 +15,8 @@ imgmin(inputs, {glob: false, destination: dest, plugins: [
   imageminPngquant({
     quality: [0.6, 0.8]
   }),
-  imageminJpegtran({
-    progressive: true
+  imageminMozjpeg({
+    quality: 75,
+    progressive: false
   })
 ]})

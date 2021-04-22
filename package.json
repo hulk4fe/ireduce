@@ -27,5 +27,8 @@
     "imagemin-jpegtran": "^6.0.0",
     "imagemin-pngquant": "^9.0.1",
     "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "imagemin-mozjpeg": "^9.0.0"
   }
 }
